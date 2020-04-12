@@ -1,17 +1,20 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 require('dotenv/config');
 
 //Import Routes
 const postRoute = require('./routes/posts');
 
-app.use('/post',postRoute);
 
 //Middlewares
 // app.use('/posts',()=>{
 //     console.log('This is a middleware')
 // });
+app.use(bodyParser.json());
+app.use('/post',postRoute);
+
 
 
 app.get('/',(req, res)=> {
