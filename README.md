@@ -1,3 +1,7 @@
 # Simple Node API
 
- CodeAlongWith Dev Ed
+  CodeAlongWith Dev Ed 
+
+ ~~~
+    npm start
+ ~~~
